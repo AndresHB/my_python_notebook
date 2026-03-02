@@ -1,0 +1,51 @@
+"""
+Entrypoint de la aplicación FastAPI.
+Maneja el ciclo de vida de la conexión a MongoDB.
+"""
+
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from app.core.config import settings
+from app.core.database import connect_db, close_db
+from app.routers import games
+
+
+# ── Lifespan: conecta/desconecta MongoDB ──
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await connect_db()
+    yield
+    await close_db()
+
+
+# ── App ──
+app = FastAPI(
+    title=settings.APP_TITLE,
+    version=settings.APP_VERSION,
+    description="API para consultar la base de datos de juegos de MegamanX.",
+    lifespan=lifespan,
+)
+
+# ── CORS (desarrollo local) ──
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# ── Routers ──
+app.include_router(games.router)
+
+
+# ── Root endpoint ──
+@app.get("/", tags=["Health"])
+async def root():
+    return {
+        "service": settings.APP_TITLE,
+        "version": settings.APP_VERSION,
+        "docs": "/docs",
+    }
