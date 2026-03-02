@@ -1,0 +1,1153 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "megaman_x_mainline",
+  "games": [
+    {
+      "id": "mmx1",
+      "title": "Mega Man X",
+      "release_year": 1993,
+      "platforms": ["SNES"],
+      "timeline_position": "Saga X (inicio)",
+      "setting": {
+        "era": "Siglo XXI",
+        "world_state": "Surgen Reploids y también Mavericks; se crea la unidad Maverick Hunters",
+        "main_location": "Metrópolis futurista (no especificada)"
+      },
+      "synopsis": "X despierta en una era donde los Reploids conviven con humanos, pero la rebelión Maverick escala rápidamente. Sigma, líder de los Maverick Hunters, cae y encabeza la insurrección. X entra en la guerra para detenerlo y entender qué significa tener libre albedrío.",
+      "main_antagonist": {
+        "name": "Sigma",
+        "role": "Ex-líder de los Maverick Hunters; cabecilla Maverick",
+        "goal": "Dominar la Tierra y someter/aniquilar a la humanidad"
+      },
+      "playable_character": {
+        "name": "X",
+        "base_abilities": [
+          "X-Buster (disparo cargable)",
+          "Dash",
+          "Wall Jump",
+          "Armas copiadas de jefes"
+        ]
+      },
+      "supporting_characters": [
+        {
+          "name": "Zero",
+          "role": "Maverick Hunter clase S",
+          "description": "Compañero y mentor de X en el campo de batalla."
+        },
+        {
+          "name": "Dr. Cain",
+          "role": "Científico",
+          "description": "Descubre a X y lidera la era Reploid moderna."
+        },
+        {
+          "name": "Dr. Light (cápsulas)",
+          "role": "Holograma/IA",
+          "description": "Deja mejoras para X en cápsulas."
+        }
+      ],
+      "bosses": [
+        {
+          "name": "Chill Penguin",
+          "animal_type": "Pingüino",
+          "stage_theme": "Base ártica",
+          "weapon_awarded": "Shotgun Ice",
+          "primary_weakness": "Fire Wave",
+          "difficulty_estimate": "Fácil"
+        },
+        {
+          "name": "Spark Mandrill",
+          "animal_type": "Mandril",
+          "stage_theme": "Planta eléctrica",
+          "weapon_awarded": "Electric Spark",
+          "primary_weakness": "Shotgun Ice",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Armored Armadillo",
+          "animal_type": "Armadillo",
+          "stage_theme": "Mina",
+          "weapon_awarded": "Rolling Shield",
+          "primary_weakness": "Electric Spark",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Launch Octopus",
+          "animal_type": "Pulpo",
+          "stage_theme": "Base marítima",
+          "weapon_awarded": "Homing Torpedo",
+          "primary_weakness": "Rolling Shield",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Boomer Kuwanger",
+          "animal_type": "Escarabajo ciervo",
+          "stage_theme": "Torre aérea",
+          "weapon_awarded": "Boomerang Cutter",
+          "primary_weakness": "Homing Torpedo",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Sting Chameleon",
+          "animal_type": "Camaleón",
+          "stage_theme": "Selva",
+          "weapon_awarded": "Chameleon Sting",
+          "primary_weakness": "Boomerang Cutter",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Storm Eagle",
+          "animal_type": "Águila",
+          "stage_theme": "Aeropuerto militar",
+          "weapon_awarded": "Storm Tornado",
+          "primary_weakness": "Chameleon Sting",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Flame Mammoth",
+          "animal_type": "Mamut",
+          "stage_theme": "Fábrica industrial",
+          "weapon_awarded": "Fire Wave",
+          "primary_weakness": "Storm Tornado",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Sigma",
+          "animal_type": "Reploid",
+          "stage_theme": "Fortaleza Sigma",
+          "weapon_awarded": null,
+          "primary_weakness": "Rolling Shield (fase final)",
+          "difficulty_estimate": "Muy Alta",
+          "multi_phase": true,
+          "phases": [
+            {
+              "phase_name": "Sigma (forma con sable)",
+              "description": "Combate ágil con sable de energía.",
+              "weakness": "X-Buster cargado"
+            },
+            {
+              "phase_name": "Wolf Sigma",
+              "description": "Cabeza mecánica gigante integrada en una estructura mural.",
+              "weakness": "Rolling Shield"
+            }
+          ],
+          "final_boss": true
+        }
+      ],
+      "gameplay_features": {
+        "armor_parts": [
+          {
+            "name": "Helmet Upgrade",
+            "location_hint": "Stage de Storm Eagle",
+            "ability_granted": "Romper bloques especiales y descubrir accesos",
+            "impact_on_gameplay": "Habilita rutas/secretos",
+            "mandatory": false
+          },
+          {
+            "name": "Body Armor",
+            "location_hint": "Stage de Sting Chameleon",
+            "ability_granted": "Reduce daño recibido",
+            "impact_on_gameplay": "Mayor supervivencia",
+            "mandatory": false
+          },
+          {
+            "name": "Arm Upgrade",
+            "location_hint": "Stage de Flame Mammoth",
+            "ability_granted": "Mejora la carga del X-Buster",
+            "impact_on_gameplay": "Más daño/eficiencia",
+            "mandatory": true
+          },
+          {
+            "name": "Leg Upgrade",
+            "location_hint": "Stage de Chill Penguin",
+            "ability_granted": "Dash aéreo",
+            "impact_on_gameplay": "Movilidad avanzada",
+            "mandatory": true
+          }
+        ],
+        "heart_tanks_total": 8,
+        "sub_tanks_total": 4,
+        "special_move_secret": "Hadouken"
+      },
+      "themes": ["Libre albedrío", "Ética en IA", "Guerra tecnológica"],
+      "canonical_outcome": "Sigma cae, pero X queda marcado por el costo moral de la guerra contra los Mavericks."
+    },
+
+    {
+      "id": "mmx2",
+      "title": "Mega Man X2",
+      "release_year": 1994,
+      "platforms": ["SNES"],
+      "timeline_position": "Saga X (2)",
+      "setting": {
+        "era": "Siglo XXI",
+        "world_state": "La amenaza Sigma persiste; aparecen los X-Hunters y los Mavericks aumentan",
+        "main_location": "Regiones industriales y militares (varias)"
+      },
+      "synopsis": "X continúa como Maverick Hunter mientras los X-Hunters buscan reconstruir poder usando tecnología y los restos de Zero. Sigma reaparece como núcleo de una nueva amenaza, escalando hacia una confrontación viral.",
+      "main_antagonist": {
+        "name": "Sigma",
+        "role": "Arquitecto de la crisis y jefe final",
+        "goal": "Reanudar su revolución y corromper el orden Reploid"
+      },
+      "playable_character": {
+        "name": "X",
+        "base_abilities": [
+          "X-Buster (mejoras)",
+          "Dash",
+          "Wall Jump",
+          "Armas copiadas de jefes"
+        ]
+      },
+      "supporting_characters": [
+        {
+          "name": "Zero",
+          "role": "Maverick Hunter (pieza clave)",
+          "description": "Su estado/partes son objetivo central de los X-Hunters."
+        },
+        {
+          "name": "Dr. Light (cápsulas)",
+          "role": "Holograma/IA",
+          "description": "Entrega mejoras y un ataque secreto."
+        }
+      ],
+      "bosses": [
+        {
+          "name": "Wire Sponge",
+          "animal_type": "Esponja",
+          "stage_theme": "Planta meteorológica",
+          "weapon_awarded": "Strike Chain",
+          "primary_weakness": "Sonic Slicer",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Wheel Gator",
+          "animal_type": "Cocodrilo",
+          "stage_theme": "Complejo de reciclaje",
+          "weapon_awarded": "Spin Wheel",
+          "primary_weakness": "Strike Chain",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Overdrive Ostrich",
+          "animal_type": "Avestruz",
+          "stage_theme": "Desierto/ride chaser",
+          "weapon_awarded": "Sonic Slicer",
+          "primary_weakness": "Strike Chain",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Bubble Crab",
+          "animal_type": "Cangrejo",
+          "stage_theme": "Base submarina",
+          "weapon_awarded": "Bubble Splash",
+          "primary_weakness": "Spin Wheel",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Flame Stag",
+          "animal_type": "Ciervo",
+          "stage_theme": "Volcán/base de lava",
+          "weapon_awarded": "Speed Burner",
+          "primary_weakness": "Bubble Splash",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Morph Moth",
+          "animal_type": "Polilla",
+          "stage_theme": "Chatarrería/forja",
+          "weapon_awarded": "Silk Shot",
+          "primary_weakness": "Speed Burner",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Magna Centipede",
+          "animal_type": "Ciempiés",
+          "stage_theme": "Mina de cristales",
+          "weapon_awarded": "Magnet Mine",
+          "primary_weakness": "Silk Shot",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Crystal Snail",
+          "animal_type": "Caracol",
+          "stage_theme": "Fábrica de energía/cristales",
+          "weapon_awarded": "Crystal Hunter",
+          "primary_weakness": "Magnet Mine",
+          "difficulty_estimate": "Media"
+        },
+
+        {
+          "name": "Violen",
+          "animal_type": "Reploid",
+          "stage_theme": "Intercepción X-Hunters",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Agile",
+          "animal_type": "Reploid",
+          "stage_theme": "Intercepción X-Hunters",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Serges",
+          "animal_type": "Reploid",
+          "stage_theme": "Intercepción X-Hunters",
+          "weapon_awarded": null,
+          "primary_weakness": "Sonic Slicer",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Sigma",
+          "animal_type": "Reploid/Entidad viral",
+          "stage_theme": "Base de los X-Hunters",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (según fase)",
+          "difficulty_estimate": "Muy Alta",
+          "multi_phase": true,
+          "phases": [
+            {
+              "phase_name": "Sigma (forma mecánica)",
+              "description": "Combate principal contra Sigma.",
+              "weakness": "Armas especiales (rotación)"
+            },
+            {
+              "phase_name": "Sigma Virus",
+              "description": "Manifestación viral como fase final.",
+              "weakness": "Armas especiales (rotación)"
+            }
+          ],
+          "final_boss": true
+        }
+      ],
+      "gameplay_features": {
+        "armor_parts": [
+          {
+            "name": "Helmet Upgrade",
+            "location_hint": "Cápsula de Dr. Light (X2)",
+            "ability_granted": "Mejoras de análisis/uso de entorno",
+            "impact_on_gameplay": "Acceso a secretos",
+            "mandatory": false
+          },
+          {
+            "name": "Body Armor",
+            "location_hint": "Cápsula de Dr. Light (X2)",
+            "ability_granted": "Reducción de daño",
+            "impact_on_gameplay": "Mayor aguante",
+            "mandatory": false
+          },
+          {
+            "name": "Arm Upgrade",
+            "location_hint": "Cápsula de Dr. Light (X2)",
+            "ability_granted": "Mejoras del X-Buster",
+            "impact_on_gameplay": "Más daño/versatilidad",
+            "mandatory": true
+          },
+          {
+            "name": "Leg Upgrade",
+            "location_hint": "Cápsula de Dr. Light (X2)",
+            "ability_granted": "Mejoras de movilidad (dash aéreo/variantes)",
+            "impact_on_gameplay": "Exploración y evasión",
+            "mandatory": true
+          }
+        ],
+        "heart_tanks_total": 8,
+        "sub_tanks_total": 4,
+        "special_move_secret": "Shoryuken",
+        "notable_mechanics": [
+          "X-Hunters aparecen y pueden ser enfrentados en escenarios Maverick"
+        ]
+      },
+      "themes": [
+        "Persistencia del conflicto",
+        "Reparación vs. reemplazo",
+        "Identidad (Zero)"
+      ],
+      "canonical_outcome": "Sigma vuelve a caer, pero su amenaza evoluciona hacia lo viral y sistémico."
+    },
+
+    {
+      "id": "mmx3",
+      "title": "Mega Man X3",
+      "release_year": 1995,
+      "platforms": ["SNES"],
+      "timeline_position": "Saga X (3)",
+      "setting": {
+        "era": "Siglo XXI",
+        "world_state": "Se crea una fuerza anti-Maverick alternativa; la crisis escala con el Virus Sigma",
+        "main_location": "Zonas industriales, bases militares y complejos científicos"
+      },
+      "synopsis": "Una nueva fuerza de seguridad pretende reemplazar a los Maverick Hunters, pero el Virus Sigma se expande. X enfrenta ocho Mavericks mientras emergen amenazas como Vile y la trama alrededor de Doppler, culminando en una forma extrema de Sigma.",
+      "main_antagonist": {
+        "name": "Sigma",
+        "role": "Virus/instigador final",
+        "goal": "Corromper Reploids y dominar la era post-humana"
+      },
+      "playable_character": {
+        "name": "X",
+        "base_abilities": [
+          "X-Buster",
+          "Dash",
+          "Wall Jump",
+          "Armas copiadas de jefes"
+        ]
+      },
+      "supporting_characters": [
+        {
+          "name": "Zero",
+          "role": "Maverick Hunter",
+          "description": "Participa activamente y puede ser jugable por momentos."
+        },
+        {
+          "name": "Dr. Light (cápsulas)",
+          "role": "Holograma/IA",
+          "description": "Entrega mejoras y una armadura avanzada."
+        },
+        {
+          "name": "Dr. Doppler",
+          "role": "Científico",
+          "description": "Figura central de la crisis; su rol se revela durante la historia."
+        },
+        {
+          "name": "Vile",
+          "role": "Rival recurrente",
+          "description": "Regresa con una nueva máquina de combate."
+        }
+      ],
+      "bosses": [
+        {
+          "name": "Blizzard Buffalo",
+          "animal_type": "Búfalo",
+          "stage_theme": "Base helada",
+          "weapon_awarded": "Frost Shield",
+          "primary_weakness": "Parasitic Bomb",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Toxic Seahorse",
+          "animal_type": "Caballito de mar",
+          "stage_theme": "Refinería tóxica",
+          "weapon_awarded": "Acid Burst",
+          "primary_weakness": "Frost Shield",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Tunnel Rhino",
+          "animal_type": "Rinoceronte",
+          "stage_theme": "Túnel perforador",
+          "weapon_awarded": "Tornado Fang",
+          "primary_weakness": "Acid Burst",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Volt Catfish",
+          "animal_type": "Bagre",
+          "stage_theme": "Planta eléctrica acuática",
+          "weapon_awarded": "Triad Thunder",
+          "primary_weakness": "Tornado Fang",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Crush Crawfish",
+          "animal_type": "Cangrejo de río",
+          "stage_theme": "Fábrica marítima",
+          "weapon_awarded": "Spinning Blade",
+          "primary_weakness": "Triad Thunder",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Neon Tiger",
+          "animal_type": "Tigre",
+          "stage_theme": "Selva/ruinas",
+          "weapon_awarded": "Ray Splasher",
+          "primary_weakness": "Spinning Blade",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Gravity Beetle",
+          "animal_type": "Escarabajo",
+          "stage_theme": "Centro gravitacional",
+          "weapon_awarded": "Gravity Well",
+          "primary_weakness": "Ray Splasher",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Blast Hornet",
+          "animal_type": "Avispa",
+          "stage_theme": "Bosque industrial",
+          "weapon_awarded": "Parasitic Bomb",
+          "primary_weakness": "Gravity Well",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Vile (Mk-II)",
+          "animal_type": "Reploid",
+          "stage_theme": "Fábrica secreta",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Bit",
+          "animal_type": "Reploid",
+          "stage_theme": "Etapas Doppler (recurrente)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Byte",
+          "animal_type": "Reploid",
+          "stage_theme": "Etapas Doppler (recurrente)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Dr. Doppler",
+          "animal_type": "Reploid",
+          "stage_theme": "Etapas Doppler",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Sigma",
+          "animal_type": "Virus/Reploid (forma extrema)",
+          "stage_theme": "Etapas Doppler (final)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (según fase)",
+          "difficulty_estimate": "Muy Alta",
+          "multi_phase": true,
+          "phases": [
+            {
+              "phase_name": "Sigma (intermedia)",
+              "description": "Combate previo antes de la manifestación final.",
+              "weakness": "Armas especiales (rotación)"
+            },
+            {
+              "phase_name": "Kaiser Sigma",
+              "description": "Forma final gigantesca (mecha).",
+              "weakness": "Armas especiales (rotación)"
+            }
+          ],
+          "final_boss": true
+        }
+      ],
+      "gameplay_features": {
+        "armor_parts": [
+          {
+            "name": "Helmet Upgrade",
+            "location_hint": "Cápsula de Dr. Light (X3)",
+            "ability_granted": "Mejoras de utilidad/exploración",
+            "impact_on_gameplay": "Acceso a secretos",
+            "mandatory": false
+          },
+          {
+            "name": "Body Armor",
+            "location_hint": "Cápsula de Dr. Light (X3)",
+            "ability_granted": "Reducción de daño",
+            "impact_on_gameplay": "Mayor resistencia",
+            "mandatory": false
+          },
+          {
+            "name": "Arm Upgrade",
+            "location_hint": "Cápsula de Dr. Light (X3)",
+            "ability_granted": "Mejoras del X-Buster",
+            "impact_on_gameplay": "Más daño/alcance",
+            "mandatory": true
+          },
+          {
+            "name": "Leg Upgrade",
+            "location_hint": "Cápsula de Dr. Light (X3)",
+            "ability_granted": "Mejoras de movilidad",
+            "impact_on_gameplay": "Exploración y evasión",
+            "mandatory": true
+          }
+        ],
+        "heart_tanks_total": 8,
+        "sub_tanks_total": 4,
+        "special_armor": ["Golden Armor (desbloqueable)"],
+        "notable_mechanics": ["Rescates de Reploids (impacto en mejoras)"]
+      },
+      "themes": ["Confianza vs. control", "Virus como arma", "Sacrificio"],
+      "canonical_outcome": "La crisis Doppler termina, pero el Virus Sigma demuestra que la amenaza ya no es solo un individuo."
+    },
+
+    {
+      "id": "mmx4",
+      "title": "Mega Man X4",
+      "release_year": 1997,
+      "platforms": ["PlayStation", "Sega Saturn", "PC"],
+      "timeline_position": "Saga X (4)",
+      "setting": {
+        "era": "Siglo XXI",
+        "world_state": "Conflicto abierto entre Maverick Hunters y Repliforce; Sigma opera desde las sombras",
+        "main_location": "Final Weapon / escenarios militares globales"
+      },
+      "synopsis": "Una guerra estalla entre los Maverick Hunters y Repliforce tras un incidente catastrófico. X y Zero investigan mientras Sigma capitaliza el caos, llevando el conflicto hacia una confrontación final dentro del Final Weapon.",
+      "main_antagonist": {
+        "name": "Sigma",
+        "role": "Instigador final",
+        "goal": "Controlar la guerra y retomar el dominio mediante el caos"
+      },
+      "playable_character": {
+        "name": "X / Zero",
+        "base_abilities": [
+          "X: X-Buster y armadura",
+          "Zero: Z-Saber y técnicas especiales",
+          "Dash",
+          "Wall Jump"
+        ]
+      },
+      "supporting_characters": [
+        {
+          "name": "Colonel",
+          "role": "Líder Repliforce (campo)",
+          "description": "Figura central del conflicto; enfrenta a los Hunters en la historia."
+        },
+        {
+          "name": "General",
+          "role": "Comandante supremo de Repliforce",
+          "description": "Autoridad máxima de Repliforce."
+        },
+        {
+          "name": "Iris",
+          "role": "Repliforce / vínculo emocional",
+          "description": "Elemento clave en la trama de Zero."
+        }
+      ],
+      "bosses": [
+        {
+          "name": "Web Spider",
+          "animal_type": "Araña",
+          "stage_theme": "Cañón/instalación militar",
+          "weapon_awarded": "Lightning Web",
+          "primary_weakness": "Twin Slasher",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Split Mushroom",
+          "animal_type": "Hongo",
+          "stage_theme": "Cueva/biolaboratorio",
+          "weapon_awarded": "Soul Body",
+          "primary_weakness": "Lightning Web",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Cyber Peacock",
+          "animal_type": "Pavo real",
+          "stage_theme": "Ciber-escenario/entrenamiento",
+          "weapon_awarded": "Aiming Laser",
+          "primary_weakness": "Soul Body",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Storm Owl",
+          "animal_type": "Búho",
+          "stage_theme": "Base aérea",
+          "weapon_awarded": "Double Cyclone",
+          "primary_weakness": "Aiming Laser",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Frost Walrus",
+          "animal_type": "Morsa",
+          "stage_theme": "Base polar",
+          "weapon_awarded": "Frost Tower",
+          "primary_weakness": "Rising Fire",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Jet Stingray",
+          "animal_type": "Mantarraya",
+          "stage_theme": "Portaaviones oceánico",
+          "weapon_awarded": "Ground Hunter",
+          "primary_weakness": "Frost Tower",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Slash Beast",
+          "animal_type": "Felino (bestia)",
+          "stage_theme": "Tren/armamento pesado",
+          "weapon_awarded": "Twin Slasher",
+          "primary_weakness": "Ground Hunter",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Magma Dragoon",
+          "animal_type": "Dragón",
+          "stage_theme": "Complejo volcánico",
+          "weapon_awarded": "Rising Fire",
+          "primary_weakness": "Double Cyclone",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Colonel",
+          "animal_type": "Reploid",
+          "stage_theme": "Encuentro de historia",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "General",
+          "animal_type": "Reploid",
+          "stage_theme": "Final Weapon (historia)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas (varias)",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Double",
+          "animal_type": "Reploid",
+          "stage_theme": "Final Weapon (historia)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas (varias)",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Sigma",
+          "animal_type": "Reploid/forma mutada",
+          "stage_theme": "Final Weapon (final)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (según fase)",
+          "difficulty_estimate": "Muy Alta",
+          "multi_phase": true,
+          "phases": [
+            {
+              "phase_name": "Sigma (guadaña)",
+              "description": "Forma humanoide con guadaña/energía.",
+              "weakness": "Armas especiales (rotación)"
+            },
+            {
+              "phase_name": "Sigma (segunda forma)",
+              "description": "Evolución más agresiva con ataques de energía.",
+              "weakness": "Armas especiales (rotación)"
+            },
+            {
+              "phase_name": "Sigma (forma final)",
+              "description": "Manifestación final dentro del Final Weapon.",
+              "weakness": "Armas especiales (rotación)"
+            }
+          ],
+          "final_boss": true
+        }
+      ],
+      "gameplay_features": {
+        "armor_parts": [
+          {
+            "name": "Fourth Armor - Helmet",
+            "location_hint": "Stage de Cyber Peacock",
+            "ability_granted": "Mejora de utilidad/exploración",
+            "impact_on_gameplay": "Acceso a rutas/secretos",
+            "mandatory": false
+          },
+          {
+            "name": "Fourth Armor - Body",
+            "location_hint": "Stage de Frost Walrus",
+            "ability_granted": "Reducción de daño + habilidad especial de armadura",
+            "impact_on_gameplay": "Mayor supervivencia",
+            "mandatory": false
+          },
+          {
+            "name": "Fourth Armor - Arm",
+            "location_hint": "Stage de Jet Stingray",
+            "ability_granted": "Plasma Shot (mejora del X-Buster)",
+            "impact_on_gameplay": "Más alcance y control",
+            "mandatory": true
+          },
+          {
+            "name": "Fourth Armor - Leg",
+            "location_hint": "Stage de Web Spider",
+            "ability_granted": "Hover/air dash mejorado",
+            "impact_on_gameplay": "Movilidad avanzada",
+            "mandatory": true
+          }
+        ],
+        "heart_tanks_total": 8,
+        "sub_tanks_total": 4,
+        "notable_mechanics": [
+          "Selección de personaje (X o Zero) con progresión distinta"
+        ]
+      },
+      "themes": [
+        "Guerra y propaganda",
+        "Lealtad vs. verdad",
+        "Tragedia personal"
+      ],
+      "canonical_outcome": "La guerra concluye al derrotar a Sigma, pero deja pérdidas profundas y consecuencias políticas."
+    },
+
+    {
+      "id": "mmx5",
+      "title": "Mega Man X5",
+      "release_year": 2000,
+      "platforms": ["PlayStation", "PC"],
+      "timeline_position": "Saga X (5)",
+      "setting": {
+        "era": "Siglo XXI",
+        "world_state": "Amenaza de impacto orbital (Eurasia) mientras Sigma mueve piezas y el Virus se intensifica",
+        "main_location": "Escenarios globales + Sigma Stages"
+      },
+      "synopsis": "La colonia espacial Eurasia cae hacia la Tierra. X y Zero buscan piezas para detenerla (Enigma/Shuttle) mientras Sigma manipula los eventos. La crisis desemboca en el Virus de Zero y un cierre de ciclo emocional para ambos protagonistas.",
+      "main_antagonist": {
+        "name": "Sigma",
+        "role": "Instigador final",
+        "goal": "Desatar el desastre y explotar el virus para reordenar el mundo"
+      },
+      "playable_character": {
+        "name": "X / Zero",
+        "base_abilities": [
+          "X: armaduras múltiples",
+          "Zero: técnicas y estilos",
+          "Dash",
+          "Wall Jump"
+        ]
+      },
+      "supporting_characters": [
+        {
+          "name": "Alia",
+          "role": "Operadora",
+          "description": "Soporte táctico (briefings y análisis)."
+        },
+        {
+          "name": "Dynamo",
+          "role": "Mercenario",
+          "description": "Interrumpe el progreso y funciona como combate recurrente."
+        }
+      ],
+      "bosses": [
+        {
+          "name": "Grizzly Slash",
+          "animal_type": "Oso",
+          "stage_theme": "Base ártica",
+          "weapon_awarded": "Crescent Shot",
+          "primary_weakness": "Spike Ball",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Duff McWhalen",
+          "animal_type": "Ballena",
+          "stage_theme": "Instalación submarina",
+          "weapon_awarded": "Goo Shaver",
+          "primary_weakness": "Crescent Shot",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Squid Adler",
+          "animal_type": "Calamar",
+          "stage_theme": "Base orbital/energía",
+          "weapon_awarded": "Tri-Thunder",
+          "primary_weakness": "Goo Shaver",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Izzy Glow",
+          "animal_type": "Luciérnaga",
+          "stage_theme": "Laboratorio/energía",
+          "weapon_awarded": "Spike Ball",
+          "primary_weakness": "Tri-Thunder",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Dark Dizzy",
+          "animal_type": "Murciélago",
+          "stage_theme": "Cementerio/ruinas",
+          "weapon_awarded": "Dark Hold",
+          "primary_weakness": "Spike Ball",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "The Skiver",
+          "animal_type": "Pegaso",
+          "stage_theme": "Ascenso vertical",
+          "weapon_awarded": "Wing Spiral",
+          "primary_weakness": "Dark Hold",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Mattrex",
+          "animal_type": "Dinosaurio",
+          "stage_theme": "Complejo volcánico",
+          "weapon_awarded": "F-Laser",
+          "primary_weakness": "Wing Spiral",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Axle the Red",
+          "animal_type": "Rosa (botánico)",
+          "stage_theme": "Jardín/fortaleza vegetal",
+          "weapon_awarded": "Ray Arrow",
+          "primary_weakness": "F-Laser",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Shadow Devil",
+          "animal_type": "Entidad",
+          "stage_theme": "Sigma Stages",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Muy Alta"
+        },
+        {
+          "name": "Rangda Bangda (II)",
+          "animal_type": "Entidad",
+          "stage_theme": "Sigma Stages",
+          "weapon_awarded": null,
+          "primary_weakness": "Dependiente de componente (ojos/caras)",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "Sigma",
+          "animal_type": "Reploid/forma viral",
+          "stage_theme": "Sigma Stages (final)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (según fase)",
+          "difficulty_estimate": "Muy Alta",
+          "multi_phase": true,
+          "phases": [
+            {
+              "phase_name": "Sigma (forma 1)",
+              "description": "Combate inicial contra Sigma.",
+              "weakness": "Armas especiales (rotación)"
+            },
+            {
+              "phase_name": "Sigma (forma final)",
+              "description": "Forma final con ataques de energía/virus.",
+              "weakness": "Armas especiales (rotación)"
+            }
+          ],
+          "final_boss": true
+        }
+      ],
+      "gameplay_features": {
+        "armor_parts": [
+          {
+            "name": "Fourth Armor (set)",
+            "location_hint": "Disponible para X (set clásico)",
+            "ability_granted": "Set de armadura tipo X4 para X",
+            "impact_on_gameplay": "Movilidad + buster mejorado",
+            "mandatory": false
+          },
+          {
+            "name": "Falcon Armor (set)",
+            "location_hint": "Cápsulas de Dr. Light (X5)",
+            "ability_granted": "Set centrado en movilidad aérea",
+            "impact_on_gameplay": "Alta movilidad/flight según partes",
+            "mandatory": false
+          },
+          {
+            "name": "Gaea Armor (set)",
+            "location_hint": "Cápsulas de Dr. Light (X5)",
+            "ability_granted": "Set defensivo orientado a absorción/impacto",
+            "impact_on_gameplay": "Tanqueo y juego “pesado”",
+            "mandatory": false
+          }
+        ],
+        "heart_tanks_total": 8,
+        "sub_tanks_total": 4,
+        "notable_mechanics": [
+          "Sistema de tiempo/decisiones para detener Eurasia (Enigma/Shuttle)"
+        ]
+      },
+      "themes": [
+        "Catástrofe inminente",
+        "Destino vs. decisión",
+        "Rivalidad y lealtad"
+      ],
+      "canonical_outcome": "La crisis Eurasia culmina con la confrontación final; los finales varían, pero Sigma es derrotado nuevamente."
+    },
+
+    {
+      "id": "mmx6",
+      "title": "Mega Man X6",
+      "release_year": 2001,
+      "platforms": ["PlayStation", "PC"],
+      "timeline_position": "Saga X (6)",
+      "setting": {
+        "era": "Siglo XXI",
+        "world_state": "Tras Eurasia, aparece el Nightmare; Gate y High Max se vuelven ejes del conflicto",
+        "main_location": "Áreas infectadas por Nightmare + laboratorio de Gate"
+      },
+      "synopsis": "El mundo queda marcado por el desastre y el fenómeno Nightmare. Gate y High Max emergen como antagonistas de nueva generación, mientras Sigma vuelve a infiltrarse en la ecuación. X y Zero enfrentan ocho Mavericks y un tramo final centrado en Gate.",
+      "main_antagonist": {
+        "name": "Gate (con la sombra de Sigma)",
+        "role": "Antagonista principal del arco",
+        "goal": "Reordenar el mundo Reploid mediante Nightmare/ingeniería avanzada"
+      },
+      "playable_character": {
+        "name": "X / Zero",
+        "base_abilities": [
+          "X: armaduras Blade/Shadow",
+          "Zero: técnicas",
+          "Dash",
+          "Wall Jump"
+        ]
+      },
+      "supporting_characters": [
+        {
+          "name": "Gate",
+          "role": "Científico",
+          "description": "Crea/usa tecnología Nightmare y dirige la crisis."
+        },
+        {
+          "name": "High Max",
+          "role": "Ejecutor",
+          "description": "Guerrero asociado a Gate; actúa como “muralla” en la campaña."
+        },
+        {
+          "name": "Isoc",
+          "role": "Figura enigmática",
+          "description": "Vinculado a Gate; su naturaleza es sospechosa."
+        }
+      ],
+      "bosses": [
+        {
+          "name": "Commander Yammark",
+          "animal_type": "Libélula",
+          "stage_theme": "Bosque/bioma con Nightmare",
+          "weapon_awarded": "Yammar Option",
+          "primary_weakness": "Ray Arrow",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Ground Scaravich",
+          "animal_type": "Escarabajo",
+          "stage_theme": "Museo/ruinas variables",
+          "weapon_awarded": "Ground Dash",
+          "primary_weakness": "Yammar Option",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Blaze Heatnix",
+          "animal_type": "Fénix",
+          "stage_theme": "Planta incineradora",
+          "weapon_awarded": "Magma Blade",
+          "primary_weakness": "Ground Dash",
+          "difficulty_estimate": "Alta"
+        },
+        {
+          "name": "Blizzard Wolfang",
+          "animal_type": "Lobo",
+          "stage_theme": "Base nevada",
+          "weapon_awarded": "Ice Burst",
+          "primary_weakness": "Magma Blade",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Rainy Turtloid",
+          "animal_type": "Tortuga",
+          "stage_theme": "Zona lluviosa/inundada",
+          "weapon_awarded": "Meteor Rain",
+          "primary_weakness": "Ice Burst",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Metal Shark Player",
+          "animal_type": "Tiburón",
+          "stage_theme": "Chatarrería/reciclaje",
+          "weapon_awarded": "Metal Anchor",
+          "primary_weakness": "Meteor Rain",
+          "difficulty_estimate": "Media-Alta"
+        },
+        {
+          "name": "Shield Sheldon",
+          "animal_type": "Caracol/nautilo",
+          "stage_theme": "Instalación láser",
+          "weapon_awarded": "Guard Shell",
+          "primary_weakness": "Metal Anchor",
+          "difficulty_estimate": "Media"
+        },
+        {
+          "name": "Infinity Mijinion",
+          "animal_type": "Ciempiés",
+          "stage_theme": "Laboratorio dimensional",
+          "weapon_awarded": "Ray Arrow",
+          "primary_weakness": "Guard Shell",
+          "difficulty_estimate": "Alta"
+        },
+
+        {
+          "name": "High Max",
+          "animal_type": "Reploid",
+          "stage_theme": "Encuentros de historia",
+          "weapon_awarded": null,
+          "primary_weakness": "Requiere arma cargada + arma especial",
+          "difficulty_estimate": "Muy Alta"
+        },
+        {
+          "name": "Gate",
+          "animal_type": "Reploid",
+          "stage_theme": "Laboratorio de Gate (final)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (varias)",
+          "difficulty_estimate": "Muy Alta"
+        },
+
+        {
+          "name": "Sigma",
+          "animal_type": "Entidad recurrente",
+          "stage_theme": "Final (post-Gate)",
+          "weapon_awarded": null,
+          "primary_weakness": "Armas especiales (según fase)",
+          "difficulty_estimate": "Muy Alta",
+          "multi_phase": true,
+          "phases": [
+            {
+              "phase_name": "Sigma (forma 1)",
+              "description": "Combate inicial final.",
+              "weakness": "Armas especiales (rotación)"
+            },
+            {
+              "phase_name": "Sigma (forma final)",
+              "description": "Última manifestación en X6.",
+              "weakness": "Armas especiales (rotación)"
+            }
+          ],
+          "final_boss": true
+        }
+      ],
+      "gameplay_features": {
+        "armor_parts": [
+          {
+            "name": "Blade Armor (set)",
+            "location_hint": "Cápsulas de Dr. Light (X6)",
+            "ability_granted": "Movilidad aérea reforzada + Z-Saber para X",
+            "impact_on_gameplay": "Combate y movilidad agresivos",
+            "mandatory": false
+          },
+          {
+            "name": "Shadow Armor (set)",
+            "location_hint": "Cápsulas de Dr. Light (X6)",
+            "ability_granted": "Estilo ninja (movilidad/acciones especiales; limitaciones según set)",
+            "impact_on_gameplay": "Movilidad alternativa y rutas específicas",
+            "mandatory": false
+          }
+        ],
+        "heart_tanks_total": 8,
+        "sub_tanks_total": 4,
+        "notable_mechanics": [
+          "Nightmare effects alteran stages",
+          "Reploids rescatables/impacto en equipo"
+        ]
+      },
+      "themes": [
+        "Post-catástrofe",
+        "Control científico y ética",
+        "Cicatrices de guerra"
+      ],
+      "canonical_outcome": "Gate cae y Sigma reaparece para el cierre; la amenaza Nightmare deja secuelas, y la saga avanza hacia nuevas etapas."
+    }
+  ]
+}
