@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ──────────────────────────────────────────────
-# setup.sh — Crea venv, instala dependencias y ejecuta seed.py
+# setup_db.sh — Crea venv, instala dependencias y ejecuta seed.py
 # Prerrequisito: mongod debe estar corriendo (usa start_db.sh).
 # ──────────────────────────────────────────────
 set -euo pipefail

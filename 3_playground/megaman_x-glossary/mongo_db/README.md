@@ -32,7 +32,7 @@ Si prefieres control manual:
 ./scripts/start_db.sh
 
 # Terminal 2 — instalar deps y sembrar
-./scripts/setup.sh
+./scripts/setup_db.sh
 ```
 
 ### Verificar datos
@@ -54,6 +54,6 @@ mongo_db/
 ├── .venv/               # Virtualenv  (git-ignored)
 └── scripts/
     ├── start_db.sh      # Levanta mongod en foreground
-    ├── setup.sh         # Instala deps + ejecuta seed
+    ├── setup_db.sh         # Instala deps + ejecuta seed
     └── seed.py          # Script de inserción (upsert)
 ```

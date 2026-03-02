@@ -55,7 +55,7 @@ done
 echo ""
 
 # ── 3. Ejecutar setup (venv + seed) ──
-"$SCRIPT_DIR/setup.sh"
+"$SCRIPT_DIR/setup_db.sh"
 
 echo ""
 echo "🚀  ¡Todo arriba! MongoDB corriendo en puerto $MONGO_PORT."
