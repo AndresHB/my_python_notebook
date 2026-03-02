@@ -1,0 +1,60 @@
+INFO:     Will watch for changes in these directories: ['/Users/andres_hb/Desktop/Dev/Playground/Python/my_python_notebook/3_playground/megaman_x-glossary/fastapi']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [83973] using WatchFiles
+INFO:     Started server process [84102]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅  Conectado a MongoDB → mongodb://localhost:27017
+INFO:     127.0.0.1:49601 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49601 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49602 - "GET /games HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49651 - "GET / HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84102]
+INFO:     Started server process [84610]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84610]
+INFO:     Started server process [84618]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84618]
+INFO:     Started server process [84783]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84783]
+INFO:     Started server process [84807]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84807]
+INFO:     Started server process [84827]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅  Conectado a MongoDB → mongodb://localhost:27017
+INFO:     127.0.0.1:49850 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49850 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49851 - "GET /games HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49856 - "GET /games/mmx6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49885 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49885 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49885 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49885 - "GET /openapi.json HTTP/1.1" 200 OK
