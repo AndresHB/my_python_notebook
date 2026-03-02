@@ -28,9 +28,11 @@ mkdir -p "$DATA_DIR"
 
 # ── 1. Levantar mongod en background ──
 echo "🟢  Iniciando mongod en background..."
-mongod --dbpath "$DATA_DIR" --bind_ip 127.0.0.1 --port "$MONGO_PORT" --fork --logpath "$DATA_DIR/mongod.log" --pidfilepath "$PID_FILE"
+mongod --dbpath "$DATA_DIR" --bind_ip 127.0.0.1 --port "$MONGO_PORT" > "$DATA_DIR/mongod.log" 2>&1 &
+MONGOD_PID=$!
+echo "$MONGOD_PID" > "$PID_FILE"
 
-echo "   PID     → $(cat "$PID_FILE")"
+echo "   PID     → $MONGOD_PID"
 echo "   dbpath  → $DATA_DIR"
 echo "   puerto  → $MONGO_PORT"
 echo "   log     → $DATA_DIR/mongod.log"
