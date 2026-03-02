@@ -8,7 +8,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-DATA_DIR="$PROJECT_DIR/data"
+DATA_DIR="$PROJECT_DIR/.data"
 
 # Verificar que mongod está instalado
 if ! command -v mongod &>/dev/null; then
