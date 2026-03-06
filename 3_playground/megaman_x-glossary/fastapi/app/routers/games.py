@@ -3,11 +3,11 @@ Router para los endpoints de juegos de MegamanX.
 """
 
 from fastapi import APIRouter, HTTPException
-from app.models.game import GameSummary, GameDetail
+
 from app.services import game_service
+from app.models.game import GameSummary, GameDetail
 
 router = APIRouter(prefix="/games", tags=["Games"])
-
 
 @router.get(
     "",
@@ -18,7 +18,6 @@ router = APIRouter(prefix="/games", tags=["Games"])
 async def list_games():
     games = await game_service.get_all_games()
     return games
-
 
 @router.get(
     "/{game_id}",

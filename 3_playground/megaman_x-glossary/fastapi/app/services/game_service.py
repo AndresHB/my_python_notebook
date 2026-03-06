@@ -17,6 +17,7 @@ async def get_all_games() -> list[dict]:
         "_id": 0,
         "id": 1,
         "title": 1,
+        "synopsis": 1,
         "release_year": 1,
         "platforms": 1,
         "timeline_position": 1,
