@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ──────────────────────────────────────────────
-# init.sh — Levanta MongoDB + ejecuta seed en un solo paso
-# Guarda el PID de mongod en data/mongod.pid para exit.sh.
+# init.sh — Starts MongoDB + runs seed in a single step
+# Saves the mongod PID in data/mongod.pid for exit.sh.
 # ──────────────────────────────────────────────
 set -euo pipefail
 
@@ -11,42 +11,42 @@ DATA_DIR="$PROJECT_DIR/.data"
 PID_FILE="$DATA_DIR/mongod.pid"
 MONGO_PORT=27017
 
-# ── Verificar que mongod está instalado ──
+# ── Check that mongod is installed ──
 if ! command -v mongod &>/dev/null; then
-  echo "❌  mongod no encontrado. Instálalo con:  brew install mongodb-community"
+  echo "❌  mongod not found. Install it with:  brew install mongodb-community"
   exit 1
 fi
 
-# ── Verificar que no hay otra instancia corriendo ──
+# ── Check that no other instance is running ──
 if [ -f "$PID_FILE" ] && kill -0 "$(cat "$PID_FILE")" 2>/dev/null; then
-  echo "⚠️  mongod ya está corriendo (PID $(cat "$PID_FILE")). Usa ./exit.sh para detenerlo primero."
+  echo "⚠️  mongod is already running (PID $(cat "$PID_FILE")). Use ./exit.sh to stop it first."
   exit 1
 fi
 
-# ── Crear carpeta de datos ──
+# ── Create data folder ──
 mkdir -p "$DATA_DIR"
 
-# ── 1. Levantar mongod en background ──
-echo "🟢  Iniciando mongod en background..."
+# ── 1. Start mongod in background ──
+echo "🟢  Starting mongod in background..."
 mongod --dbpath "$DATA_DIR" --bind_ip 127.0.0.1 --port "$MONGO_PORT" > "$DATA_DIR/mongod.log" 2>&1 &
 MONGOD_PID=$!
 echo "$MONGOD_PID" > "$PID_FILE"
 
 echo "   PID     → $MONGOD_PID"
 echo "   dbpath  → $DATA_DIR"
-echo "   puerto  → $MONGO_PORT"
+echo "   port    → $MONGO_PORT"
 echo "   log     → $DATA_DIR/mongod.log"
 echo ""
 
-# ── 2. Esperar a que mongod acepte conexiones ──
-echo "⏳  Esperando a que mongod esté listo..."
+# ── 2. Wait for mongod to accept connections ──
+echo "⏳  Waiting for mongod to be ready..."
 for i in $(seq 1 15); do
   if mongosh --quiet --port "$MONGO_PORT" --eval "db.runCommand({ping:1})" &>/dev/null; then
-    echo "✅  mongod listo."
+    echo "✅  mongod is ready."
     break
   fi
   if [ "$i" -eq 15 ]; then
-    echo "❌  mongod no respondió tras 15 segundos. Revisa $DATA_DIR/mongod.log"
+    echo "❌  mongod did not respond after 15 seconds. Check $DATA_DIR/mongod.log"
     exit 1
   fi
   sleep 1
@@ -54,9 +54,9 @@ done
 
 echo ""
 
-# ── 3. Ejecutar setup (venv + seed) ──
+# ── 3. Run setup (venv + seed) ──
 "$SCRIPT_DIR/setup_db.sh"
 
 echo ""
-echo "🚀  ¡Todo arriba! MongoDB corriendo en puerto $MONGO_PORT."
-echo "    Para detener:  ./exit.sh"
+echo "🚀  All up! MongoDB running on port $MONGO_PORT."
+echo "    To stop:  ./exit.sh"

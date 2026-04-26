@@ -1,6 +1,6 @@
 """
-Entrypoint de la aplicación FastAPI.
-Maneja el ciclo de vida de la conexión a MongoDB.
+FastAPI application entrypoint.
+Manages the MongoDB connection lifecycle.
 """
 
 from fastapi import FastAPI
@@ -11,7 +11,7 @@ from app.routers import games
 from app.core.config import settings
 from app.core.database import connect_db, close_db
 
-# ── Lifespan: conecta/desconecta MongoDB ──
+# ── Lifespan: connect/disconnect MongoDB ──
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await connect_db()
@@ -22,11 +22,11 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title=settings.APP_TITLE,
     version=settings.APP_VERSION,
-    description="API para consultar la base de datos de juegos de Megaman X.",
+    description="API to query the Megaman X games database.",
     lifespan=lifespan,
 )
 
-# ── CORS (desarrollo local) ──
+# ── CORS (local development) ──
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

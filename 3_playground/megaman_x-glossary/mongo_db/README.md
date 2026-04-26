@@ -1,59 +1,59 @@
 # MongoDB — Megaman X Glossary
 
-Base de datos local de MongoDB con el glosario de la saga Mega Man X.
+Local MongoDB database with the Mega Man X saga glossary.
 
-## Requisitos
+## Requirements
 
 - **Python 3.10+**
-- **MongoDB** (`mongod`) — instalar con `brew install mongodb-community`
+- **MongoDB** (`mongod`) — install with `brew install mongodb-community`
 
-## Uso rápido
+## Quick Start
 
-### Todo en un paso
+### All in one step
 
 ```bash
 ./init.sh
 ```
 
-Levanta `mongod` en background, crea el virtualenv, instala dependencias y ejecuta el seed.
+Starts `mongod` in background, creates the virtualenv, installs dependencies and runs the seed.
 
-### Detener MongoDB
+### Stop MongoDB
 
 ```bash
 ./exit.sh
 ```
 
-### Uso manual (2 terminales)
+### Manual usage (2 terminals)
 
-Si prefieres control manual:
+If you prefer manual control:
 
 ```bash
-# Terminal 1 — levantar mongod en foreground
+# Terminal 1 — start mongod in foreground
 ./scripts/start_db.sh
 
-# Terminal 2 — instalar deps y sembrar
+# Terminal 2 — install deps and seed
 ./scripts/setup_db.sh
 ```
 
-### Verificar datos
+### Verify data
 
 ```bash
-mongosh --eval 'db = db.getSiblingDB("megaman_x_glossary"); print("documentos:", db.megaman_x_mainline.countDocuments({}))'
+mongosh --eval 'db = db.getSiblingDB("megaman_x_glossary"); print("documents:", db.megaman_x_mainline.countDocuments({}))'
 ```
 
-## Estructura
+## Structure
 
 ```
 mongo_db/
-├── init.sh              # Levanta todo (mongod + seed)
-├── exit.sh              # Detiene mongod
-├── backup.json          # Datos fuente del glosario
+├── init.sh              # Starts everything (mongod + seed)
+├── exit.sh              # Stops mongod
+├── backup.json          # Glossary source data
 ├── requirements.txt     # pymongo>=4.6
 ├── README.md
-├── .data/               # Datos de mongod (git-ignored)
+├── .data/               # mongod data (git-ignored)
 ├── .venv/               # Virtualenv  (git-ignored)
 └── scripts/
-    ├── start_db.sh      # Levanta mongod en foreground
-    ├── setup_db.sh         # Instala deps + ejecuta seed
-    └── seed.py          # Script de inserción (upsert)
+    ├── start_db.sh      # Starts mongod in foreground
+    ├── setup_db.sh      # Installs deps + runs seed
+    └── seed.py          # Insertion script (upsert)
 ```

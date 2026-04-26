@@ -1,21 +1,21 @@
 # MegamanX Glossary — FastAPI
 
-API REST para consultar la base de datos de juegos de MegamanX.
+REST API to query the MegamanX games database.
 
-## Prerequisitos
+## Prerequisites
 
 - Python 3.11+
-- MongoDB corriendo en `localhost:27017` (usa `../mongo_db/init.sh` para levantarlo)
+- MongoDB running on `localhost:27017` (use `../mongo_db/init.sh` to start it)
 
-## Arrancar
+## Start
 
 ```bash
 ./init.sh
 ```
 
-Esto crea un virtualenv, instala dependencias y levanta uvicorn en background.
+This creates a virtualenv, installs dependencies and starts uvicorn in the background.
 
-## Detener
+## Stop
 
 ```bash
 ./exit.sh
@@ -23,29 +23,29 @@ Esto crea un virtualenv, instala dependencias y levanta uvicorn en background.
 
 ## Endpoints
 
-| Método | Ruta               | Descripción                 |
-| ------ | ------------------ | --------------------------- |
-| GET    | `/`                | Health check                |
-| GET    | `/games`           | Listado de todos los juegos |
-| GET    | `/games/{game_id}` | Detalle de un juego por id  |
+| Method | Route              | Description      |
+| ------ | ------------------ | ---------------- |
+| GET    | `/`                | Health check     |
+| GET    | `/games`           | List all games   |
+| GET    | `/games/{game_id}` | Get a game by id |
 
-### Ejemplos
+### Examples
 
 ```bash
-# Listado
+# List all
 curl http://localhost:8000/games
 
-# Detalle
+# Detail
 curl http://localhost:8000/games/mmx1
 
-# Docs interactivos
+# Interactive docs
 open http://localhost:8000/docs
 ```
 
-## Variables de entorno
+## Environment Variables
 
-| Variable    | Default                     | Descripción         |
-| ----------- | --------------------------- | ------------------- |
-| `MONGO_URI` | `mongodb://localhost:27017` | URI de MongoDB      |
-| `MONGO_DB`  | `megaman_x_glossary`        | Nombre de la base   |
-| `APP_PORT`  | `8000`                      | Puerto del servidor |
+| Variable    | Default                     | Description   |
+| ----------- | --------------------------- | ------------- |
+| `MONGO_URI` | `mongodb://localhost:27017` | MongoDB URI   |
+| `MONGO_DB`  | `megaman_x_glossary`        | Database name |
+| `APP_PORT`  | `8000`                      | Server port   |

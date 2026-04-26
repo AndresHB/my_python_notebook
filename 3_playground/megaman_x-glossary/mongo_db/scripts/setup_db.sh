@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ──────────────────────────────────────────────
-# setup_db.sh — Crea venv, instala dependencias y ejecuta seed.py
-# Prerrequisito: mongod debe estar corriendo (usa start_db.sh).
+# setup_db.sh — Creates venv, installs dependencies and runs seed.py
+# Prerequisite: mongod must be running (use start_db.sh).
 # ──────────────────────────────────────────────
 set -euo pipefail
 
@@ -9,24 +9,24 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 VENV_DIR="$PROJECT_DIR/.venv"
 
-# ── 1. Crear virtualenv si no existe ──
+# ── 1. Create virtualenv if it does not exist ──
 if [ ! -d "$VENV_DIR" ]; then
-  echo "📦  Creando virtualenv en .venv ..."
+  echo "📦  Creating virtualenv in .venv ..."
   python3 -m venv "$VENV_DIR"
 fi
 
-# ── 2. Activar virtualenv ──
+# ── 2. Activate virtualenv ──
 # shellcheck disable=SC1091
 source "$VENV_DIR/bin/activate"
 
-# ── 3. Instalar dependencias ──
-echo "📥  Instalando dependencias..."
+# ── 3. Install dependencies ──
+echo "📥  Installing dependencies..."
 pip install --quiet --upgrade pip
 pip install --quiet -r "$PROJECT_DIR/requirements.txt"
 
-# ── 4. Ejecutar seed ──
-echo "🌱  Ejecutando seed.py..."
+# ── 4. Run seed ──
+echo "🌱  Running seed.py..."
 python "$SCRIPT_DIR/seed.py"
 
 echo ""
-echo "✅  ¡Listo! Base de datos sembrada correctamente."
+echo "✅  Done! Database seeded successfully."

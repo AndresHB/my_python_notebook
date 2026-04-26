@@ -1,17 +1,17 @@
 """
-Pydantic schemas para los juegos de MegamanX.
-Separados en GameSummary (listado) y GameDetail (documento completo).
+Pydantic schemas for MegamanX games.
+Separated into GameSummary (listing) and GameDetail (full document).
 """
 
 from typing import Any
 from pydantic import BaseModel, Field
 
 # ──────────────────────────────────────────────
-#  Schemas para el listado (GET /games)
+#  Schemas for the listing (GET /games)
 # ──────────────────────────────────────────────
 
 class GameSummary(BaseModel):
-    """Resumen reducido de un juego, usado en el listado."""
+    """Reduced summary of a game, used in the listing."""
     id: str
     title: str
     synopsis: str
@@ -20,7 +20,7 @@ class GameSummary(BaseModel):
     timeline_position: str
 
 # ──────────────────────────────────────────────
-#  Sub-schemas para el detalle (GET /games/{id})
+#  Sub-schemas for the detail (GET /games/{id})
 # ──────────────────────────────────────────────
 
 class Setting(BaseModel):
@@ -74,11 +74,11 @@ class GameplayFeatures(BaseModel):
     notable_mechanics: list[str] = Field(default_factory=list)
 
 # ──────────────────────────────────────────────
-#  Schema completo (GET /games/{id})
+#  Full schema (GET /games/{id})
 # ──────────────────────────────────────────────
 
 class GameDetail(BaseModel):
-    """Documento completo de un juego de MegamanX."""
+    """Full document for a MegamanX game."""
     id: str
     title: str
     release_year: int

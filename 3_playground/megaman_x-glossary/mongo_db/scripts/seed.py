@@ -12,7 +12,7 @@ def main() -> None:
     backup_path = base_dir / "backup.json"
 
     if not backup_path.exists():
-        raise FileNotFoundError(f"No encuentro backup.json en: {backup_path}")
+        raise FileNotFoundError(f"Cannot find backup.json at: {backup_path}")
 
     with backup_path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
@@ -22,7 +22,7 @@ def main() -> None:
     schema_version = payload.get("schema_version")
 
     if not collection_name or not isinstance(games, list):
-        raise ValueError("backup.json debe incluir 'collection' y 'games' (lista).")
+        raise ValueError("backup.json must include 'collection' and 'games' (list).")
 
     client = MongoClient(mongo_uri)
     db = client[db_name]
@@ -48,7 +48,7 @@ def main() -> None:
             f"upserts={result.upserted_count} modified={result.modified_count}"
         )
     else:
-        print("No hay juegos válidos para insertar (faltan ids).")
+        print("No valid games to insert (missing ids).")
 
 
 if __name__ == "__main__":

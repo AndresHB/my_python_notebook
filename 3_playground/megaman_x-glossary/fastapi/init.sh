@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ──────────────────────────────────────────────
-# init.sh — Crea venv, instala dependencias y arranca uvicorn
-# Guarda el PID del servidor en .pid para exit.sh.
+# init.sh — Creates venv, installs dependencies and starts uvicorn
+# Saves the server PID in .pid for exit.sh.
 # ──────────────────────────────────────────────
 set -euo pipefail
 
@@ -10,37 +10,37 @@ VENV_DIR="$PROJECT_DIR/.venv"
 PID_FILE="$PROJECT_DIR/.pid"
 APP_PORT="${APP_PORT:-8000}"
 
-# ── Verificar que no hay otra instancia corriendo ──
+# ── Check that no other instance is running ──
 if [ -f "$PID_FILE" ] && kill -0 "$(cat "$PID_FILE")" 2>/dev/null; then
-  echo "⚠️  El servidor ya está corriendo (PID $(cat "$PID_FILE")). Usa ./exit.sh para detenerlo primero."
+  echo "⚠️  The server is already running (PID $(cat "$PID_FILE")). Use ./exit.sh to stop it first."
   exit 1
 fi
 
-# ── 1. Crear virtualenv si no existe ──
+# ── 1. Create virtualenv if it does not exist ──
 if [ ! -d "$VENV_DIR" ]; then
-  echo "📦  Creando virtualenv en .venv ..."
+  echo "📦  Creating virtualenv in .venv ..."
   python3 -m venv "$VENV_DIR"
 fi
 
-# ── 2. Activar virtualenv ──
+# ── 2. Activate virtualenv ──
 # shellcheck disable=SC1091
 source "$VENV_DIR/bin/activate"
 
-# ── 3. Instalar dependencias ──
-echo "📥  Instalando dependencias..."
+# ── 3. Install dependencies ──
+echo "📥  Installing dependencies..."
 pip install --quiet --upgrade pip
 pip install --quiet -r "$PROJECT_DIR/requirements.txt"
 
-# ── 4. Arrancar uvicorn en background ──
-echo "🟢  Iniciando servidor FastAPI en puerto $APP_PORT..."
+# ── 4. Start uvicorn in background ──
+echo "🟢  Starting FastAPI server on port $APP_PORT..."
 uvicorn app.main:app --host 0.0.0.0 --port "$APP_PORT" --reload --app-dir "$PROJECT_DIR" > "$PROJECT_DIR/.server.log" 2>&1 &
 SERVER_PID=$!
 echo "$SERVER_PID" > "$PID_FILE"
 
 echo ""
 echo "   PID    → $SERVER_PID"
-echo "   Puerto → $APP_PORT"
+echo "   Port   → $APP_PORT"
 echo "   Docs   → http://localhost:$APP_PORT/docs"
 echo "   Log    → $PROJECT_DIR/.server.log"
 echo ""
-echo "🚀  ¡Servidor arriba! Para detener:  ./exit.sh"
+echo "🚀  Server is up! To stop:  ./exit.sh"

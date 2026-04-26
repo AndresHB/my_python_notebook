@@ -1,6 +1,6 @@
 """
-Configuración centralizada del proyecto.
-Lee variables de entorno con valores por defecto sensatos para desarrollo local.
+Centralized project configuration.
+Reads environment variables with sensible defaults for local development.
 """
 
 from pydantic_settings import BaseSettings

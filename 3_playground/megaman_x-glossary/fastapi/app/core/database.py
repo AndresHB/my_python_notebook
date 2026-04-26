@@ -1,40 +1,40 @@
 """
-Conexión async a MongoDB usando Motor.
-Se conecta/desconecta a través del lifespan de FastAPI.
+Async MongoDB connection using Motor.
+Connects/disconnects through the FastAPI lifespan.
 """
 
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from app.core.config import settings
 
-# ── Cliente global (se inicializa en connect_db) ──
+# ── Global client (initialized in connect_db) ──
 _client: AsyncIOMotorClient | None = None
 
 async def connect_db() -> None:
-    """Abre la conexión con MongoDB."""
+    """Opens the connection to MongoDB."""
     global _client
     _client = AsyncIOMotorClient(
         settings.MONGO_URI,
         serverSelectionTimeoutMS=5000,
     )
-    # Verifica que la conexión sea válida
+    # Verify the connection is valid
     try:
         await _client.admin.command("ping")
-        print(f"✅  Conectado a MongoDB → {settings.MONGO_URI}")
+        print(f"✅  Connected to MongoDB → {settings.MONGO_URI}")
     except Exception as e:
-        print(f"⚠️  No se pudo conectar a MongoDB ({settings.MONGO_URI}): {e}")
-        print("   El servidor arrancará, pero las consultas fallarán hasta que MongoDB esté disponible.")
+        print(f"⚠️  Could not connect to MongoDB ({settings.MONGO_URI}): {e}")
+        print("   The server will start, but queries will fail until MongoDB is available.")
 
 async def close_db() -> None:
-    """Cierra la conexión con MongoDB."""
+    """Closes the connection to MongoDB."""
     global _client
     if _client is not None:
         _client.close()
-        print("🛑  Conexión a MongoDB cerrada.")
+        print("🛑  MongoDB connection closed.")
         _client = None
 
 def get_database():
-    """Devuelve la referencia a la base de datos configurada."""
+    """Returns a reference to the configured database."""
     if _client is None:
-        raise RuntimeError("La conexión a MongoDB no está inicializada. ¿Olvidaste llamar connect_db()?")
+        raise RuntimeError("MongoDB connection is not initialized. Did you forget to call connect_db()?")
     return _client[settings.MONGO_DB]
